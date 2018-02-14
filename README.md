@@ -6,7 +6,7 @@ which is useful then you have multiple access users.
 
 We also use **GenStage** to honour Kraken request limitations.
 
-[Hex docs](https://hex.pm/kraken)
+[Hex docs](https://hexdocs.pm/kraken/Kraken.API.html)
 
 ## Installation
 Add `kraken` to your list of dependencies in `mix.exs`:
@@ -44,5 +44,11 @@ Use `KRAKEN_API_KEY` and `KRAKEN_PRIVATE_KEY` environment variables to set your 
 
 Run `mix test` as usual.
 
-# Restrictions
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2018 Vyacheslav Voronchuk
+
+## Restrictions
 * __This library is in it's early beta, use on your own risk. Pull requests / reports / feedback are welcome.__

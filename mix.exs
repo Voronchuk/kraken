@@ -42,7 +42,9 @@ defmodule Kraken.Mixfile do
     [
       {:httpoison, "~> 0.13"},
       {:gen_stage, "~> 0.12"},
-      {:jason, "~> 1.0.0-rc.1"}
+      {:jason, "~> 1.0.0-rc.1"},
+
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
