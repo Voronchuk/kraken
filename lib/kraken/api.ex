@@ -126,6 +126,22 @@ defmodule Kraken.API do
   end
 
   @doc """
+  Get detailed info about order
+
+  Options:
+
+  * __otp__: 2 factor auth code (required if it's enabled)
+  * __trades__: whether or not to include trades in output (optional.  default = false)
+  * __userref__: restrict results to given user reference id (optional)
+  * __txid__: comma delimited list of transaction ids to query info about (20 maximum)
+  """
+  @spec query_orders_info(Keyword.t) :: {:ok, map()} | {:error, ApiError}
+  def query_orders_info(opts \\ []) do
+    params = Keyword.take(opts, [:trades, :userref, :txid])
+    private_post_request("QueryOrders", params, opts)
+  end
+
+  @doc """
   Get account's open orders
 
   Options:
