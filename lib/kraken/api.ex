@@ -261,6 +261,9 @@ defmodule Kraken.API do
       {:ok, %{"error" => error}} ->
         Logger.warn fn() -> "Kraken API result error: #{inspect(error)}" end
         {:error, ApiError}
+      {:ok, %HTTPoison.Response{status_code: code}} ->
+        Logger.warn fn() -> "Kraken API result error code: #{inspect(code)}" end
+        {:error, ApiError}
       {:error, _} ->
         {:error, ApiError}
     end
@@ -300,6 +303,9 @@ defmodule Kraken.API do
     else
       {:ok, %{"error" => error}} ->
         Logger.warn fn() -> "Kraken API result error: #{inspect(error)}" end
+        {:error, ApiError}
+      {:ok, %HTTPoison.Response{status_code: code}} ->
+        Logger.warn fn() -> "Kraken API result error code: #{inspect(code)}" end
         {:error, ApiError}
       {:error, _} ->
         {:error, ApiError}

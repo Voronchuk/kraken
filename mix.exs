@@ -4,7 +4,7 @@ defmodule Kraken.Mixfile do
   def project do
     [
       app: :kraken,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.5",
       description: "REST API wrapper to communicate with Kraken exchange.",
       docs: [extras: ["README.md"]],

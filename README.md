@@ -14,7 +14,7 @@ Add `kraken` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:kraken, "~> 0.1.1"}
+    {:kraken, "~> 0.1.2"}
   ]
 end
 ```
